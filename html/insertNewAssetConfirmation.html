@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Asset Management App</title>
+	<link href="../css/insertNewAssetConfirmation.css" type="text/css" rel="stylesheet" /> 
 	<!-- Import Bootstrap to make website mobile friendly -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -27,24 +28,30 @@
 <p>Success!</p>
 <p>Your item has been saved</p>
 
-<p>Click here for Asset Details</p>
-<ul>
-	<li>Item Name: Couch</li>
-	<li>Price: $200</li>
-	<li>Year of Purchase: 2003</li>
-	<li>Manufacturer: Ikea</li>
-	<li>
-		<p>Picture of Asset</p>
-		<img src="..\img\couch.jpg"></img>
-	</li>
-	<li>
-		<p>Picture of Receipt</p>
-		<img src="..\img\receipt.jpg" width="100" height="150"></img>
-	</li>
-</ul>
-<a href="insertNewAsset.html">Insert Another Asset</a>
+<button class="accordion">Click here for Asset Details</button>
+<div class="panel">
+	<ul>
+		<li>Item Name: Couch</li>
+		<li>Price: $200</li>
+		<li>Year of Purchase: 2003</li>
+		<li>Manufacturer: Ikea</li>
+		<li>
+			<p>Picture of Asset</p>
+			<img src="..\img\couch.jpg"></img>
+		</li>
+		<li>
+			<p>Picture of Receipt</p>
+			<img src="..\img\receipt.jpg" width="100" height="150"></img>
+		</li>
+	</ul>
+</div>
+
+<a href="insertNewAsset.html" type="button">Insert Another Asset</a>
 <br></br>
-<a href="homepage.html">Back to Home</a>
+<a href="homepage.html" type="button">Back to Home</a>
+
+<!-- Custom JavaScript logic for this file -->
+<script src="../js/insertNewAssetConfirmation.js"></script>
 
 </body>
 </html>
