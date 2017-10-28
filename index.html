@@ -2,7 +2,11 @@
 <html>
 <head>
 	<title>Asset Management App</title>
-	<link href="css/index.css" type="text/css" rel="stylesheet" /> 
+
+	<!-- Make content easy to view on any size screen -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="css/index.css" type="text/css" rel="stylesheet" />
 	<!-- Import Bootstrap to make website mobile friendly -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -10,18 +14,19 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<div class="container">
+		<h1>Asset Management App</h1>
 
-<h1>Asset Management App</h1>
-
-<p>Email</p>
-<input></input>
-<p>Password</p>
-<input></input>
-<br></br>
-<a href=".\html\registrationPage.html">Register</a>
-<a href=".\html\homepage.html">Sign In</a>
-<br></br>
-<a href=".\html\forgotPassword.html">Forgot Password?</a>
+		<p>Email</p>
+		<input></input>
+		<p>Password</p>
+		<input></input>
+		<br></br>
+		<a class="btn btn-info" href=".\html\homepage.html">Sign In</a>
+		<a class="btn btn-success" href=".\html\registrationPage.html">Register</a>
+		<br></br>
+		<a href=".\html\forgotPassword.html">Forgot Password?</a>
+	</div>
 
 </body>
 </html>
