@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Item Details</title>
-    <!-- Make content easy to view on any size screen -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Item Details</title>
+  <!-- Make content easy to view on any size screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/itemDetails.css" type="text/css" rel="stylesheet" />
 </head>
 
@@ -19,34 +19,37 @@
     <input type="text" name="yearOfPurchase"><br>
   </form>
 
-    Picture of Item<br>
+  Picture of Item<br>
 
-    <div class="itemImage" id="itemImage">
-      <a href="itemImage.html" class="thumbnail">
-        <p>Item Image</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvDh-NnbeI2JmRcO1mkKctYhFDWwduxKq_7yjzh2X-VrCyDvrig"
-          alt="Item image" class="img" />
+  <div class="itemImage" id="itemImage">
+    <a href="itemImage.html" class="thumbnail">
+      <p>Item Image</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvDh-NnbeI2JmRcO1mkKctYhFDWwduxKq_7yjzh2X-VrCyDvrig"
+      alt="Item image" class="img" />
+    </a>
+  </div>
 
-      </a>
-    </div>
+  Picture of Receipt<br>
 
-    Picture of Receipt<br>
+  <div class="receiptImage" id="receiptImage">
+    <a href="receiptImage" class="thumbnail">
+      <p>Receipt Image</p>
+      <img src="https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/JMEAAOSwU8hY7jvS/$_86.JPG"
+      width="200" height="200" alt"Receipt image" class="img" />
+    </a>
+  </div>
 
-    <div class="receiptImage" id="receiptImage">
-      <a href="receiptImage" class="thumbnail">
-        <p>Receipt Image</p>
-        <img src="https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/JMEAAOSwU8hY7jvS/$_86.JPG"
-          width="200" height="200" alt"Receipt image" class="img" />
-      </a>
-    </div>
 
-    Manufacturer<br>
 
   <form>
+    Manufacturer<br>
     <input type="text" name="manufacturer"><br>
-    Misc. Notes<br>
-    <input type="text" name="notes"><br>
   </form>
 
-</body>
+    Misc. Notes<br>
+    <form action="./searchResults.html">
+      <textarea name="notes" rows="10" cols="30"> </textarea>
+    </form>
+
+  </body>
 </html>
