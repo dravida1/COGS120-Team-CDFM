@@ -8,7 +8,6 @@
   	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link href="css/advancedSearch.css" type="text/css" rel="stylesheet"/>
     </head>
 
     <body>
@@ -40,22 +39,21 @@
       <h1>Advanced Search</h1>
 
       <form>
-        Item Name:<br>
-        <input type="text" name="itemName"><br>
+        <h2>Item Name:</h2>
+        <input type="text" class="form-control input-lg" name="itemName">
       </form>
 
-      Price Range:<br>
-      <form action="./searchResults.html">
-        <select name="priceRange">
+      <h2>Price Range:</h2>
+      <form>
+        <select class="form-control input-lg" name="priceRange">
           <option value="fiveHund">$0 - $500</option>
           <option value="oneThous">$500 - $1000</option>
           <option value="fifteenHund">$1000 - $1500</option>
           <option value="twoThouse">$1500-$2000</option>
         </select>
-          <br><br>
 
-        Year of Purchase:<br>
-        <select name="yearOfPurchase">
+        <h2>Year of Purchase:</h2>
+        <select class="form-control input-lg" name="yearOfPurchase">
           <option value="2000">2000</option>
           <option value="2001">2001</option>
           <option value="2002">2002</option>
@@ -75,17 +73,18 @@
           <option value="2016">2016</option>
           <option value="2017">2017</option>
         </select>
-        <br><br>
 
-        Manufacturer:<br>
-        <select name="manufacturer">
+        <h2>Manufacturer:</h2>
+        <select class="form-control input-lg" name="manufacturer">
           <option value="Ikea">Ikea</option>
           <option value="lazyBoy">La-Z-Boy</option>
           <option value="apple">Apple</option>
         </select>
-        <br><br>
-        <input type="submit">
       </form>
+
+      <br><br>
+
+        <a class="btn-lg btn-success" href="./searchResults.html">Search</a>
 
     </body>
 </html>
