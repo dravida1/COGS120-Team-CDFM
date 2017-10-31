@@ -14,10 +14,12 @@ $(document).ready(function(){
 		let itemNameField  = $("#itemNameField").val();
 		let itemPriceField = $("#itemPriceField").val();
 		let itemYearField  = $("#year").val();
+		let itemPictureField = $("#itemPictureField").val();
 
 		console.log("itemNameField: " + itemNameField);
 		console.log("itemPriceField: " + itemPriceField);
 		console.log("itemYearField: " + itemYearField);
+		console.log("itemPictureField: " + itemPictureField);
 
 		// check if all forms filled out here...
 
@@ -53,6 +55,17 @@ $(document).ready(function(){
 		else{
 			$('#itemYearSection').addClass("has-success");
 		}
-		// Please specify year of purchase
+
+		// if a picture of the item is not given
+		if(itemPictureField == ""){
+			// give input box a red border
+			$('#itemPictureSection').addClass("has-error");
+			// Error message
+			$('#pictureOfItemError').text("Please provide a picture of the item");
+		}
+		else{
+			// give input box a green border
+			$('#itemPictureSection').addClass("has-success");
+		}
 	});
 });
