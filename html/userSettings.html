@@ -31,26 +31,45 @@
                   <li><a href="searchForItem.html">Search for Item</a></li>
               </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">            <span class="glyphicon glyphicon-user"></span> Settings</a></li>
+              <li><a href="userSettings.html">            <span class="glyphicon glyphicon-user"></span> Settings</a></li>
                 <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
             </ul>
           </div>
       </div>
   </nav>
 
-  <h1>Settings</h1>
+  <div class="container">
+    <div class="page-header">
+      <h1>Settings</h1>
+    </div>
 
-    <form action="./homepage.html">
-      First Name:<br>
-      <input type="text" name="firstName"><br>
-      Last Name:<br>
-      <input type="text" name="lastName"><br>
-      Email:<br>
-      <input type="text" name="email"><br>
-      Password:<br>
-      <input type="password" name="password"><br><br>
-      <input type="submit" name="Save Settings">
-    </form>
+    <label>First Name</label>
+    <input class="form-control input-lg" type="text" name="firstName"></input>
 
-  </body>
+    <label>Last Name</label>
+    <input class="form-control input-lg" type="text" name="lastName"></input>
+
+    <label>Email</label>
+    <input class="form-control input-lg" type="text" name="email"></input>
+
+    <a class="btn btn-success">Submit Account Changes</a>
+
+    <div class="page-header">
+      <h2>Change Account Password</h2>
+      
+    </div>
+    <label>Current Password</label>
+    <input class="form-control input-lg" type="password" name="password">
+
+    <label>New Password</label>
+    <input class="form-control input-lg" type="password" name="newPassword">
+
+    <label>Confirm New Password</label>
+    <input class="form-control input-lg" type="password" name="newPasswordConfirm"></input>
+
+    <a class="btn btn-success" name="Save Settings">Change Password</a>
+
+  </div>
+
+</body>
 </html>
