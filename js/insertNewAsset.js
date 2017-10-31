@@ -49,6 +49,14 @@ $(document).ready(function(){
 				$('#itemPriceSection').addClass("has-success");
 			}
 
+			// if value in item price field is not a valid number
+			if(isNaN(itemPriceField)){
+				// Give input box a red border
+				$('#itemPriceSection').addClass("has-error");	
+				// Error message
+				$("#priceValueError").text("Please provide a valid price");							
+			}
+
 			// if an item year is not given
 			if(itemYearField == ""){
 				// give input box a red border
