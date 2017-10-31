@@ -16,12 +16,14 @@ $(document).ready(function(){
 		let itemYearField  = $("#year").val();
 		let itemPictureField = $("#itemPictureField").val();
 		let itemReceiptField = $("#itemReceiptField").val();
+		let itemManufacturerField = $("#itemManufacturerField").val();
 
 		console.log("itemNameField: " + itemNameField);
 		console.log("itemPriceField: " + itemPriceField);
 		console.log("itemYearField: " + itemYearField);
 		console.log("itemPictureField: " + itemPictureField);
 		console.log("itemReceiptField: " + itemReceiptField);
+		console.log("itemManufacturerField: " + itemManufacturerField);
 
 		// check if all forms filled out here...
 
@@ -30,7 +32,7 @@ $(document).ready(function(){
 			// Give input box a red border
 			$("#itemNameSection").addClass("has-error");
 			// Error Message
-			$("#itemNameError").text("Please specify an item name");
+			$("#itemNameError").text("Please provide an item name");
 		}
 		else{
 			$("#itemNameSection").addClass("has-success");
@@ -41,7 +43,7 @@ $(document).ready(function(){
 			// Give input box a red border
 			$('#itemPriceSection').addClass("has-error");
 			// Error message
-			$("#priceValueError").text("Please specify the item's price");
+			$("#priceValueError").text("Please provide the item's price");
 		}
 		else{
 			$('#itemPriceSection').addClass("has-success");
@@ -52,7 +54,7 @@ $(document).ready(function(){
 			// give input box a red border
 			$('#itemYearSection').addClass("has-error");
 			// Error message
-			$("#yearValueError").text("Please specify the year of purchase");
+			$("#yearValueError").text("Please provide the year of purchase");
 		}
 		else{
 			$('#itemYearSection').addClass("has-success");
@@ -81,5 +83,16 @@ $(document).ready(function(){
 			// give input box a green border
 			$("#itemReceiptSection").addClass("has-success");
 		}
+
+		if(itemManufacturerField == ""){
+			// give input box a red border
+			$("#itemManufacturerSection").addClass("has-error");
+			// Error message
+			$("#manufacturerNameError").text("Please provide the item's manufacturer");
+		}
+		else{
+			$("#itemManufacturerSection").addClass("has-success");
+		}
+
 	});
 });
