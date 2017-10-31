@@ -15,11 +15,13 @@ $(document).ready(function(){
 		let itemPriceField = $("#itemPriceField").val();
 		let itemYearField  = $("#year").val();
 		let itemPictureField = $("#itemPictureField").val();
+		let itemReceiptField = $("#itemReceiptField").val();
 
 		console.log("itemNameField: " + itemNameField);
 		console.log("itemPriceField: " + itemPriceField);
 		console.log("itemYearField: " + itemYearField);
 		console.log("itemPictureField: " + itemPictureField);
+		console.log("itemReceiptField: " + itemReceiptField);
 
 		// check if all forms filled out here...
 
@@ -66,6 +68,18 @@ $(document).ready(function(){
 		else{
 			// give input box a green border
 			$('#itemPictureSection').addClass("has-success");
+		}
+
+		// Please provide a receipt of the item
+		if(itemReceiptField == ""){
+			// give input box a red border
+			$("#itemReceiptSection").addClass("has-error");
+			// Error message
+			$("#pictureOfReceiptError").text("Please provide a picture of the receipt of the item");
+		}
+		else{
+			// give input box a green border
+			$("#itemReceiptSection").addClass("has-success");
 		}
 	});
 });
