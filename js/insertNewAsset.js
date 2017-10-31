@@ -18,19 +18,13 @@ $(document).ready(function(){
 		let itemReceiptField = $("#itemReceiptField").val();
 		let itemManufacturerField = $("#itemManufacturerField").val();
 
-		// console.log("itemNameField: " + itemNameField);
-		// console.log("itemPriceField: " + itemPriceField);
-		// console.log("itemYearField: " + itemYearField);
-		// console.log("itemPictureField: " + itemPictureField);
-		// console.log("itemReceiptField: " + itemReceiptField);
-		// console.log("itemManufacturerField: " + itemManufacturerField);
-
 		// check if all mandatory forms are filled in...
 		if(itemNameField != "" && itemPriceField != "" && itemYearField != "" 
 			&& itemPictureField != "" && itemReceiptField != "" && itemManufacturerField != ""){
 			console.log("Everything's filled in!");
 
 		}
+		// All fields not filled in, highlight which ones are and which ones are not
 		else{
 			// If an item name is not given
 			if(itemNameField == ""){
