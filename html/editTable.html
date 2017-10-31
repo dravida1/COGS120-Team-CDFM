@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Table</title>
+  <!-- Make content easy to view on any size screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Import Bootstrap to make website mobile friendly -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Asset Management</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                  <li><a href="homepage.html">Home</a></li>
+                  <li><a href="insertNewAsset.html">Insert Asset</a></li>
+                  <li><a href="searchForItem.html">Search for Item</a></li>
+              </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">            <span class="glyphicon glyphicon-user"></span> Settings</a></li>
+                <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+            </ul>
+          </div>
+      </div>
+  </nav>
+
+  <div class="container">
+    <h1>Edit</h1>
+
+    <form>
+      <p>Item Name:</p>
+      <input type="text" name="itemName" value="Table">
+      <p>Price $:</p>
+      <input type="text" name="itemPrice" value="400">
+      <p>Year of Purchase:</p>
+      <input type="text" name="yearOfPurchase" value="2010">
+    </form>
+
+    <p>Picture of Item</p>
+
+    <div class="itemImage" id="itemImage">
+      <a href="itemImage.html" class="thumbnail">
+        <p>Item Image</p>
+        <img src="https://images2.roomstogo.com/is/image/roomstogo/dr_tbl_42193502_riverdale_leg~Riverdale-Cherry-Rectangle-Dining-Table.jpeg?$PDP_Primary_936x650$"
+          width="200" height="200" alt="Item image" class="img" />
+      </a>
+    </div>
+
+    <p>Picture of Receipt</p>
+
+    <div class="receiptImage" id="receiptImage">
+      <a href="receiptImage" class="thumbnail">
+        <p>Receipt Image</p>
+        <img src="https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/JMEAAOSwU8hY7jvS/$_86.JPG"
+        width="200" height="200" alt"Receipt image" class="img" />
+      </a>
+    </div>
+
+
+
+    <form>
+      <p>Manufacturer</p>
+    <input type="text" name="manufacturer" value="Ikea"><br>
+    </form>
+
+    <p>Misc. Notes</p>
+      <form action="./searchResults.html">
+        <textarea name="notes" rows="10" cols="30"> </textarea>
+      </form>
+        <a class="btn btn-success" href="itemEditedConfirmation.html">Submit</a>
+    </div>
+  </body>
+</html>
