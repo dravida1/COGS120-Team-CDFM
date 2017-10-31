@@ -11,11 +11,13 @@ document.getElementById("year").innerHTML = options;
 $(document).ready(function(){
 	// When the submit button is clicked
 	$("#submitButton").click(function(){
-		let itemNameField = $("#itemNameField").val();
-		let itemPriceField = $('#itemPriceField').val();
+		let itemNameField  = $("#itemNameField").val();
+		let itemPriceField = $("#itemPriceField").val();
+		let itemYearField  = $("#year").val();
 
 		console.log("itemNameField: " + itemNameField);
 		console.log("itemPriceField: " + itemPriceField);
+		console.log("itemYearField: " + itemYearField);
 
 		// check if all forms filled out here...
 
@@ -30,6 +32,7 @@ $(document).ready(function(){
 			$("#itemNameSection").addClass("has-success");
 		}
 
+		// if an item price is not given
 		if(itemPriceField == ""){
 			// Give input box a red border
 			$('#itemPriceSection').addClass("has-error");
@@ -39,5 +42,17 @@ $(document).ready(function(){
 		else{
 			$('#itemPriceSection').addClass("has-success");
 		}
+
+		// if an item year is not given
+		if(itemYearField == ""){
+			// give input box a red border
+			$('#itemYearSection').addClass("has-error");
+			// Error message
+			$("#yearValueError").text("Please specify the year of purchase");
+		}
+		else{
+			$('#itemYearSection').addClass("has-success");
+		}
+		// Please specify year of purchase
 	});
 });
