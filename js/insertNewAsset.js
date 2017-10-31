@@ -21,7 +21,8 @@ $(document).ready(function(){
 		// check if all mandatory forms are filled in...
 		if(itemNameField != "" && itemPriceField != "" && itemYearField != "" 
 			&& itemPictureField != "" && itemReceiptField != "" && itemManufacturerField != ""){
-			console.log("Everything's filled in!");
+			// go to confirmation page
+			window.location = "insertNewAssetConfirmation.html";
 
 		}
 		// All fields not filled in, highlight which ones are and which ones are not
@@ -94,7 +95,5 @@ $(document).ready(function(){
 				$("#itemManufacturerSection").addClass("has-success");
 			}	
 		}
-
-
 	});
 });
