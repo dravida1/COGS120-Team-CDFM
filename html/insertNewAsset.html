@@ -41,39 +41,54 @@
 			<h1>Insert New Asset</h1>
 		</div>
 
-		<h2>Item Name *</h2>
-		<input class="form-control input-lg"></input>
-		<p class="bg-danger" id="itemNameError"></p>
-
-		<h2>Price of Item (round to the nearest dollar) *</h2>
-		<div class="input-group">
-		    <div class="input-group-addon">$</div>
-		    	<input type="text" class="form-control input-lg" id="exampleInputAmount" placeholder="Amount">
-		    <div class="input-group-addon">.00</div>
+		<div id="itemNameSection">
+			<h2>Item Name *</h2>
+			<input id="itemNameField" class="form-control input-lg"></input>
+			<span class="help-block" id="itemNameError"></span>
 		</div>
-		<p class="bg-danger" id="priceValueError"></p>
 
-		<h2>Year of Purchase *</h2>
-		<select class="form-control input-lg" id="year"></select>
-		<p class="bg-danger" id="yearValueError"></p>
+		<div id="itemPriceSection">
+			<h2>Price of Item (round to the nearest dollar) *</h2>
+			<div class="input-group">
+			    <div class="input-group-addon">$</div>
 
-		<h2>Picture of Item *</h2>
-		<input type="file" class="form-control input-lg" name="pic" accept="image/*"></input>
-		<p class="bg-danger" id="pictureOfItemError"></p>
+			    	<input type="text" class="form-control input-lg" id="itemPriceField" placeholder="Amount"></input>
 
-		<h2>Picture of Receipt *</h2>
-		<input type="file" class="form-control input-lg" name="pic" accept="image/*"></input>
-		<p class="bg-danger" id="pictureOfReceiptError"></p>
+			    <div class="input-group-addon">.00</div>
+			</div>
+			<span class="help-block" id="priceValueError"></span>
+		</div>
 
-		<h2>Manufacturer *</h2>
-		<input class="form-control input-lg"></input>
-		<p class="bg-danger" id="manufacturerNameError"></p>
+		<div>
+			<h2>Year of Purchase *</h2>
+			<select class="form-control input-lg" id="year"></select>
+			<span class="help-block" id="yearValueError">Please specify year of purchase</span>
+		</div>
+
+		<div>
+			<h2>Picture of Item *</h2>
+			<input type="file" class="form-control input-lg" name="pic" accept="image/*"></input>
+			<span class="help-block" id="pictureOfItemError">Please provide an picture of the item</span>
+		</div>
+
+		<div>
+			<h2>Picture of Receipt *</h2>
+			<input type="file" class="form-control input-lg" name="pic" accept="image/*"></input>
+			<span class="help-block" id="pictureOfReceiptError">Please provide a receipt of the item</span>
+		</div>
+
+		<div>	
+			<h2>Manufacturer *</h2>
+			<input class="form-control input-lg"></input>
+			<span class="help-block" id="manufacturerNameError">Please specify the manufacturer of this item</span>
+		</div>
 
 		<h2>Misc. Notes</h2>
 		<textarea class="form-control input-lg" rows="5" id="comment"></textarea>
 		<br></br>
 
-		<a class="btn-lg btn-success" href="insertNewAssetConfirmation.html">Submit Item</a>
+		<!-- <a class="btn-lg btn-success" id="submitButton" href="insertNewAssetConfirmation.html">Submit Item</a> -->
+		<a class="btn-lg btn-success" id="submitButton">Submit Item</a>
 		<br></br>
 	</div>
 
