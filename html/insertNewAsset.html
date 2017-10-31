@@ -41,21 +41,31 @@
 
 		<label>Item Name</label>
 		<input class="form-control input-lg"></input>
+		<p class="bg-danger" id="itemNameError"></p>
 
-		<label>Price</label>
-		<input class="form-control input-lg"></input>
+		<label>Price (round to nearest dollar)</label>
+		<div class="input-group">
+		    <div class="input-group-addon">$</div>
+		    	<input type="text" class="form-control input-lg" id="exampleInputAmount" placeholder="Amount">
+		    <div class="input-group-addon">.00</div>
+		</div>
+		<p class="bg-danger" id="priceValueError"></p>
 
 		<label>Year of Purchase</label>
-		<input class="form-control input-lg"></input>
+		<select class="form-control input-lg" id="year"></select>
+		<p class="bg-danger" id="yearValueError"></p>
 
 		<label>Picture of Item</label>
-		<input type="file" name="pic" accept="image/*"></input>
+		<input type="file" class="form-control input-lg" name="pic" accept="image/*"></input>
+		<p class="bg-danger" id="pictureOfItemError"></p>
 
 		<label>Picture of Receipt</label>
-		<input type="file" name="pic" accept="image/*"></input>
+		<input type="file" class="form-control input-lg" name="pic" accept="image/*"></input>
+		<p class="bg-danger" id="pictureOfReceiptError"></p>
 
 		<label>Manufacturer</label>
 		<input class="form-control input-lg"></input>
+		<p class="bg-danger" id="manufacturerNameError"></p>
 
 		<label>Misc. Notes</label>
 		<textarea class="form-control input-lg" rows="5" id="comment"></textarea>
@@ -64,6 +74,8 @@
 		<a class="btn btn-success" href="insertNewAssetConfirmation.html">Submit Item</a>
 		<br></br>
 	</div>
+
+<script src="../js/insertNewAsset.js"></script>
 
 </body>
 </html>
