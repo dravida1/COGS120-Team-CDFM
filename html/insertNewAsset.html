@@ -10,6 +10,7 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<!-- Top Navigation Menu -->
 	<nav class="navbar navbar-inverse">
 	    <div class="container-fluid">
 	        <div class="navbar-header">
@@ -34,16 +35,17 @@
 	    </div>
 	</nav>
 
+	<!-- Main content of page -->
 	<div class="container">
   		<div class="page-header">
 			<h1>Insert New Asset</h1>
 		</div>
 
-		<label>Item Name</label>
+		<h2>Item Name *</h2>
 		<input class="form-control input-lg"></input>
 		<p class="bg-danger" id="itemNameError"></p>
 
-		<label>Price (round to nearest dollar)</label>
+		<h2>Price of Item (round to the nearest dollar) *</h2>
 		<div class="input-group">
 		    <div class="input-group-addon">$</div>
 		    	<input type="text" class="form-control input-lg" id="exampleInputAmount" placeholder="Amount">
@@ -51,31 +53,31 @@
 		</div>
 		<p class="bg-danger" id="priceValueError"></p>
 
-		<label>Year of Purchase</label>
+		<h2>Year of Purchase *</h2>
 		<select class="form-control input-lg" id="year"></select>
 		<p class="bg-danger" id="yearValueError"></p>
 
-		<label>Picture of Item</label>
+		<h2>Picture of Item *</h2>
 		<input type="file" class="form-control input-lg" name="pic" accept="image/*"></input>
 		<p class="bg-danger" id="pictureOfItemError"></p>
 
-		<label>Picture of Receipt</label>
+		<h2>Picture of Receipt *</h2>
 		<input type="file" class="form-control input-lg" name="pic" accept="image/*"></input>
 		<p class="bg-danger" id="pictureOfReceiptError"></p>
 
-		<label>Manufacturer</label>
+		<h2>Manufacturer *</h2>
 		<input class="form-control input-lg"></input>
 		<p class="bg-danger" id="manufacturerNameError"></p>
 
-		<label>Misc. Notes</label>
+		<h2>Misc. Notes</h2>
 		<textarea class="form-control input-lg" rows="5" id="comment"></textarea>
 		<br></br>
 
-		<a class="btn btn-success" href="insertNewAssetConfirmation.html">Submit Item</a>
+		<a class="btn-lg btn-success" href="insertNewAssetConfirmation.html">Submit Item</a>
 		<br></br>
 	</div>
 
-<script src="../js/insertNewAsset.js"></script>
+	<script src="../js/insertNewAsset.js"></script>
 
 </body>
 </html>
