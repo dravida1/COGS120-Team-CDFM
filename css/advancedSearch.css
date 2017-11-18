@@ -1,0 +1,34 @@
+/* Outline all input form boxes black*/
+.form-control {
+  border: 2px solid black;
+}
+
+/* Insert a border around the [$] sign in "Price of Item" */
+.input-group-addon {
+	border: 2px solid black;
+}
+
+/* Give each icon in the navigation menu spacing */
+.icon {
+  margin-right: 10px;
+}
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+	font-size: large;
+}
+
+/* navigationMenu text is set to ghost white*/
+#navigationMenu a {
+	color: #F8F8FF;
+}
+
+/*Burger icon and "menu" text in button color is ghostwhite*/
+#menuButton {
+	color: #F8F8FF;
+}
+
+#searchButton {
+	text-align: center;
+	font-size: x-large;
+}

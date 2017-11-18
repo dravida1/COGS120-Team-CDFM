@@ -21,3 +21,44 @@ div.panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+/* Give each icon spacing */
+.icon {
+  margin-right: 10px;
+}
+
+/* User Inserted images */
+.userImage{
+    height: 200px;
+}
+
+#successIcon {
+    display: block;
+    margin: 0 auto;
+    height: 200px;   
+}
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+    font-size: large;
+}
+
+/* navigationMenu text is set to ghost white*/
+#navigationMenu a {
+	color: #F8F8FF;
+}
+
+/*Burger icon and "menu" text in button color is ghostwhite*/
+#menuButton {
+	color: #F8F8FF;
+}
+
+
+/* Center all of the content on the screen */
+#bodyContent {
+    text-align: center;
+}
+
+.bodyButton {
+    font-size: x-large;
+}

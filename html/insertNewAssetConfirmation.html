@@ -4,67 +4,81 @@
 	<title>Asset Management App</title>
 	<!-- Make content easy to view on any size screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Custom CSS for this page -->
-	<link href="../css/insertNewAssetConfirmation.css" type="text/css" rel="stylesheet" />
 	<!-- Import Bootstrap to make website mobile friendly -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Custom CSS for this page -->
+	<link href="../css/insertNewAssetConfirmation.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
-	    <div class="container-fluid">
-	        <div class="navbar-header">
-	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	            </button>
-	            <a class="navbar-brand" href="#">Asset Management</a>
-	        </div>
-	        <div class="collapse navbar-collapse" id="myNavbar">
-	            <ul class="nav navbar-nav">
-	                <li><a href="homepage.html">Home</a></li>
-	                <li><a href="insertNewAsset.html">Insert Asset</a></li>
-									<!-- Linked searchForItem.html -->
-									<li><a href="searchForItem.html">Search for Item</a></li>
-	            </ul>
-		        <ul class="nav navbar-nav navbar-right">
-		        	<li><a href="#"><span class="glyphicon glyphicon-user"></span> Settings</a></li>
-		            <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
-		        </ul>
-	        </div>
-	    </div>
-	</nav>
+  <!-- navigation bar -->
+  <nav id="navigationMenu" class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <div class="navbar-header">
+			<button id="menuButton" type="button" class="navbar-toggle navbar-brand" data-toggle="collapse" data-target="#myNavbar">
+			  <span class="icon glyphicon glyphicon-menu-hamburger"></span>Menu
+			</button>
+              <a class="navbar-brand" href="homepage.html">Asset Management</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+              <p id="usersFullName" class="navigationMenuText navbar-text"></p>
+              <ul class="nav navbar-nav">
+                <li class="active">
+                  	<a class="navigationMenuText" href="homepage.html"><span class="icon glyphicon glyphicon-home"></span>Home</a>
+                </li>
+                <li>
+                  	<a class="navigationMenuText" href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a>
+                </li>
+          		<li><a class="navigationMenuText" href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Asset</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  	<li>
+                  		<a class="navigationMenuText" href="userSettings.html"><span class="icon glyphicon glyphicon-cog"></span>Settings</a>
+                  	</li>
+                  	<li>
+                  		<a class="navigationMenuText" href="..\index.html">    <span class="icon glyphicon glyphicon-log-in"></span>Log Out</a>
+                  	</li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 
-	<div class="container">
+	<div id="bodyContent" class="container">
 		<div class="page-header">
 			<h1>Insert New Asset</h1>
 		</div>
-		<p>Success!</p>
-		<p>Your item has been saved</p>
+
+		<img id="successIcon" src="../img/success.png"></img>
+		<h2>Success!</h2>
+		<h2>Your asset has been saved</h2>
 
 		<button class="accordion">Click here for Asset Details</button>
 		<div class="panel">
-			<ul>
-				<li>Item Name: Couch</li>
-				<li>Price: $200</li>
-				<li>Year of Purchase: 2003</li>
-				<li>Manufacturer: Ikea</li>
-				<li>
-					<p>Picture of Asset</p>
-					<img src="..\img\couch.jpg"></img>
-				</li>
-				<li>
-					<p>Picture of Receipt</p>
-					<img src="..\img\receipt.jpg" width="100" height="150"></img>
-				</li>
-			</ul>
+			<h3>Asset Name</h3>
+			<h4 id="itemName"><h4>
+			<h3>Asset Price</h3>
+			<h4 id="itemPrice"></h4>
+			<h3>Asset Year</h3>
+			<h4 id="itemYear"></h4>
+			<h3>Asset Manufacturer</h3>
+			<h4 id="itemManufacturer"></h4>
+			<h3>Picture of Asset</h3>
+			<img class="userImage" id="itemPicture"></img>
+			<h3>Receipt of Asset</h3>
+			<img class="userImage" id="itemReceipt"></img>
+			<h3>Misc. Notes</h3>
+			<h4 id="itemMiscDetails"></h4>
 		</div>
-
-		<a class="btn btn-success" href="insertNewAsset.html" type="button">Insert Another Asset</a>
-		<br></br>
-		<a class="btn btn-success" href="homepage.html" class="button">Back to Home</a>
+		<div class="row">
+			<div class="col-sm-6">
+				<a class="bodyButton btn btn-block btn-success" href="insertNewAsset.html" type="button">Insert Another Asset</a>
+				<br></br>
+			</div>
+			<div class="col-sm-6">
+				<a class="bodyButton btn btn-block btn-success" href="homepage.html" class="button">Back to Home</a>
+			</div>
+		</div>
 	</div>
 
 <!-- Custom JavaScript logic for this file -->

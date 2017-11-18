@@ -1,73 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Item Details</title>
+    <title>Asset Details</title>
     <!-- Make content easy to view on any size screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Import Bootstrap to make website mobile friendly -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Custom CSS for this page -->
-    <link href="css/itemDetails.css" type="text/css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="../css/itemDetails.css" type="text/css" rel="stylesheet" />
   </head>
 <body>
 
   <!-- navigation bar -->
-  <nav class="navbar navbar-inverse">
+  <nav id="navigationMenu" class="navbar navbar-inverse">
       <div class="container-fluid">
           <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Asset Management</a>
+		    <button id="menuButton" type="button" class="navbar-toggle navbar-brand" data-toggle="collapse" data-target="#myNavbar">
+			  <span class="icon glyphicon glyphicon-menu-hamburger"></span>Menu
+			</button>
+              <a class="navbar-brand" href="homepage.html">Asset Management</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
+              <p id="usersFullName" class="navigationMenuText navbar-text"></p>
               <ul class="nav navbar-nav">
-                  <li><a href="homepage.html">Home</a></li>
-                  <li><a href="insertNewAsset.html">Insert Asset</a></li>
-                  <li><a href="searchForItem.html">Search for Item</a></li>
+                <li><a class="navigationMenuText" href="homepage.html"><span class="icon glyphicon glyphicon-home"></span>Home</a></li>
+                <li><a class="navigationMenuText" href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a></li>
+                <li class="active">
+                  <a class="navigationMenuText" href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Asset</a>
+                </li>
               </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">            <span class="glyphicon glyphicon-user"></span> Settings</a></li>
-                <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
-            </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a class="navigationMenuText" href="userSettings.html"><span class="icon glyphicon glyphicon-cog"></span>Settings</a>
+                  </li>
+                  <li>
+                    <a class="navigationMenuText" href="..\index.html">    <span class="icon glyphicon glyphicon-log-in"></span>Log Out</a>
+                  </li>
+              </ul>
           </div>
       </div>
   </nav>
+  
+  <div class="container">
+    <!-- Asset Name -->
+    <div class="page-header">
+      <h1 id="itemName"></h1>
+    </div>    
 
-  <h1> Couch </h1>
-  <h3>Item Name: Couch</h3>
-  <h3>Price: $1200</h3>
-  <h3>Year of Purchase: 2003<h3>
-  <h3>Manufacturer: Ikea<h3>
+    <!-- change the width and height attributes later... -->
+    <!-- Asset picture -->
+    <img id="itemImage" width="200", height="200"></img>
+    
+    <!-- Asset Price -->
+    <h2>Price</h2>
+    <h4 id="itemPrice"></h4>
+    
+    <h2>Year of Purchase</h2>
+    <h4 id="itemYear"><h4>
+    
+    <h2>Manufacturer</h2>
+    <h4 id="itemManufacturer"><h4>
 
-  <div class="itemImage" id="itemImage">
-    <a href="itemImage.html" class="thumbnail">
-      <p>Item Image</p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvDh-NnbeI2JmRcO1mkKctYhFDWwduxKq_7yjzh2X-VrCyDvrig"
-        alt="Item image" class="img" />
+    <!-- Asset receipt -->
+    <h2>Receipt</h2>
+    <img id="itemReceipt" alt="No receipt provided" width="200" height="200"></img>
+    
+    <!-- Misc. Notes -->
+    <h2>Misc. Notes</h2>
+    <h4 id="itemMiscNotes"></h4>
 
-  	</a>
+    <br></br>
+    <div class="row">
+      <div class="col-sm-4">
+        <a href="searchResults.html" class="bodyButtons btn-lg btn-block btn-success">Go Back To Search Results</a>
+        <br></br>
+      </div>
+      <div class="col-sm-4">
+        <a href="editItem.html" class="bodyButtons btn-lg btn-block btn-primary">Edit Asset</a>
+        <br></br>    
+      </div>
+      <div class="col-sm-4">
+        <a onclick="deleteAsset()" class="bodyButtons btn-lg btn-block btn-danger">Delete Asset</a>
+        <br></br>    
+      </div>
+    </div>
   </div>
 
-  <div class="receiptImage" id="receiptImage">
-    <a href="receiptImage" class="thumbnail">
-      <p>Receipt Image</p>
-      <img src="https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/JMEAAOSwU8hY7jvS/$_86.JPG"
-        width="200" height="200" alt"Receipt image" class="img" />
-    </a>
-  </div>
-
-  <div class="editItem" id="editItem">
-    <a href="./editItem.html" class="thumbnail">
-      <p>Edit Item Info</p>
-      <img src="https://www.shareicon.net/data/2017/02/09/878606_edit_512x512.png"
-        width="50" height="50" alt"Edit Item" class="img" />
-    </a>
-  </div>
+  <script src="../js/itemDetails.js"></script>
 
 </body>
 </html>

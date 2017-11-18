@@ -5,34 +5,51 @@
 
 	<!-- Make content easy to view on any size screen -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="css/index.css" type="text/css" rel="stylesheet" />
 	<!-- Import Bootstrap to make website mobile friendly -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Custom CSS -->
+	<link href="css/index.css" type="text/css" rel="stylesheet"></link>
 </head>
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Asset Management App</h1>
+			<img id ="logo" src="img/logo.png" alt="Asset Manager Logo"> </img>
+			<h1 id="applicationName">Asset Management App</h1>
+			<br>
+			<h4 id="subheader">Safely store away information on assets you own for when you need it in an emergency</h4>
 		</div>
 
-		<div class="form-group">
-			<label>Email</label>
-			<input class="form-control input-lg"></input>
+		<div id="emailFieldSection" class="form-group">
+			<h2>Email</h2>
+			<div class="input-group">
+				<div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+				<input id="loginEmailField" type="email" class="form-control input-lg"></input>
+			</div>
+			<span class="help-block" id="loginFieldError"></span>
 		</div>
 
-		<div class="form-group">
-			<label>Password</label>
-			<input type="password" class="form-control input-lg"></input>
+		<div id="passwordFieldSection" class="form-group">
+			<h2>Password</h2>
+			<div class="input-group">
+				<div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+				<input id="loginPasswordField" type="password" class="form-control input-lg"></input>
+			</div>
+			<span class="help-block" id="passwordFieldError"></span>
 		</div>
 
-		<a class="btn btn-info" href=".\html\homepage.html">Sign In</a>
-		<a class="btn btn-success" href=".\html\registrationPage.html">Register</a>
+		<a id="signInButton" class="btn-lg btn-info" href="#">Sign In</a>
+		<a class="btn-lg btn-success" href=".\html\registrationPage.html">Register</a>
 		<br></br>
 		<a href=".\html\forgotPassword.html">Forgot Password?</a>
+		<br></br>
+		<h3><span id="authenticationMessage">For demo purposes only, please use:</span></h3>
+		<h3><span id="authenticationMessage">Username:</span> howard@gmail.com</h3>
+		<h3><span id="authenticationMessage">Password:</span> howard</h3>
 	</div>
+
+	<script src="js/index.js"></script>
 
 </body>
 </html>

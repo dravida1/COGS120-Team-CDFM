@@ -8,31 +8,41 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="css/userSettings.css" type="text/css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="../css/userSettings.css" type="text/css" rel="stylesheet" />
   </head>
 
 <body>
 
   <!-- navigation bar -->
-  <nav class="navbar navbar-inverse">
+  <nav id="navigationMenu" class="navbar navbar-inverse">
       <div class="container-fluid">
           <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Asset Management</a>
+            <button id="menuButton" type="button" class="navbar-toggle navbar-brand" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon glyphicon glyphicon-menu-hamburger"></span>Menu
+			</button>
+              <a class="navbar-brand" href="homepage.html">Asset Management</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
+              <p id="usersFullName" class="navigationMenuText navbar-text"></p>
               <ul class="nav navbar-nav">
-                  <li><a href="homepage.html">Home</a></li>
-                  <li><a href="insertNewAsset.html">Insert Asset</a></li>
-                  <li><a href="searchForItem.html">Search for Item</a></li>
+                  <li>
+                    <a class="navigationMenuText" href="homepage.html"><span class="icon glyphicon glyphicon-home"></span>Home</a>
+                  </li>
+                  <li>
+                    <a class="navigationMenuText" href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a>
+                  </li>
+                  <li>
+                    <a class="navigationMenuText" href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Asset</a>
+                  </li>
               </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="userSettings.html">            <span class="glyphicon glyphicon-user"></span> Settings</a></li>
-                <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+              <li class="active">
+                <a class="navigationMenuText" href="userSettings.html"><span class="icon glyphicon glyphicon-cog"></span>Settings</a>
+              </li>
+              <li>
+                <a class="navigationMenuText" href="..\index.html"><span class="icon glyphicon glyphicon-log-in"></span>Log Out</a>
+              </li>
             </ul>
           </div>
       </div>
@@ -44,21 +54,21 @@
     </div>
 
     <h2>First Name</h2>
-    <input class="form-control input-lg" type="text" name="firstName"></input>
+    <input id="firstName" class="form-control input-lg" type="text" name="firstName"></input>
 
     <h2>Last Name</h2>
-    <input class="form-control input-lg" type="text" name="lastName"></input>
+    <input id="lastName" class="form-control input-lg" type="text" name="lastName"></input>
 
     <h2>Email</h2>
-    <input class="form-control input-lg" type="text" name="email"></input>
+    <input id="email" class="form-control input-lg" type="text" name="email"></input>
     <br><br>
 
-    <a class="btn btn-success" href="homepage.html" name="Save Settings">Submit Account Changes</a>
+    <a class="bodyButton btn-block btn-lg btn-success" href="homepage.html" name="Save Settings">Submit Account Changes</a>
 
     <div class="page-header">
-      <h2>Change Account Password</h2>
-
+      <h1>Change Account Password</h1>
     </div>
+
     <h2>Current Password</h2>
     <input class="form-control input-lg" type="password" name="password">
 
@@ -69,8 +79,18 @@
     <input class="form-control input-lg" type="password" name="newPasswordConfirm"></input>
     <br><br>
 
-    <a class="btn btn-success" href="itemEditedConfirmation.html" name="Save Settings">Change Password</a>
+    <a class="bodyButton btn-block btn-lg btn-success" href="homepage.html" name="Save Settings">Change Password</a>
+
+    <div class="page-header">
+      <h1>Delete Account</h1>
+    </div>
+    <h4>WARNING: This will delete your account and all the assets that the account stores</h4>
+    <br></br>
+    <a onclick="deleteAccount()" class="bodyButton btn-block btn-lg btn-danger">Delete Account</a>
+    <br></br>
   </div>
+
+  <script src="../js/userSettings.js"></script>
 
 </body>
 </html>

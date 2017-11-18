@@ -1,0 +1,28 @@
+/* Outline all input form boxes black*/
+.form-control {
+border: 2px solid black;
+}
+ /* Give each icon spacing */
+.icon {
+  margin-right: 10px;
+}
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+    font-size: large;
+}
+
+/* navigationMenu text is set to ghost white*/
+#navigationMenu a {
+	color: #F8F8FF;
+}
+
+/*Burger icon and "menu" text in button color is ghostwhite*/
+#menuButton {
+	color: #F8F8FF;
+}
+
+.bodyButton {
+	font-size: x-large;
+	text-align: center;
+}

@@ -8,40 +8,98 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="../css/homepage.css" type="text/css" rel="stylesheet" />
+
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<!-- Navigation Menu -->
+<nav id="navigationMenu" class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+            <button id="menuButton" type="button" class="navbar-toggle navbar-brand" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon glyphicon glyphicon-menu-hamburger"></span>Menu
             </button>
             <a class="navbar-brand" href="#">Asset Management</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
+            <p id="usersFullName" class="navigationMenuText navbar-text"></p>
             <ul class="nav navbar-nav">
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="insertNewAsset.html">Insert Asset</a></li>
-				<li><a href="searchForItem.html">Search for Item</a></li>
+                <li class="active">
+                    <a class="navigationMenuText" href="homepage.html"><span class="icon glyphicon glyphicon-home"></span>Home</a>
+                </li>
+                <li>
+                    <a class="navigationMenuText" href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a>
+                </li>
+				<li><a class="navigationMenuText" href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Asset</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="userSettings.html">            <span class="glyphicon glyphicon-user"></span> Settings</a></li>
-                <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+                <li><a class="navigationMenuText" href="userSettings.html"><span class="icon glyphicon glyphicon-cog"></span>Settings</a></li>
+                <li><a class="navigationMenuText" href="..\index.html">    <span class="icon glyphicon glyphicon-log-in"></span>Log Out</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container">
+<!-- Main content of page -->
+<div id="bodyContent" class="container">
     <div class="page-header">
+        <img id="logo" src="../img/logo.png"></img>
         <h1>Home</h1>
     </div>
-	<h2>Welcome, Howard!</h2>
+	<h2 id="usersFirstName"></h2>
+	
+	<div>
+		<h3 id="numOfAssetsSection"></h3>
+	</div>
+	
+	<div>
+		<h3 id = "totalValue"></h3>
+	</div>
+	
+    <br></br>
+    <div class="row">
+        <div class="col-sm-6">
+            <a class="bodyButtons btn-block btn-lg btn-success" href="insertNewAsset.html">
+                <span class="icon glyphicon glyphicon-plus"></span><br>
+                Insert New Asset
+            </a>
+            <br></br>            
+        </div>
+        <div class="col-sm-6">
+            <a class="bodyButtons btn-block btn-lg btn-success" href="searchForItem.html">
+                <span class="icon glyphicon glyphicon-search"></span><br>
+                Search For Asset
+            </a>
+            <br></br>
+        </div>
+        <div class="col-sm-6">
+            <a id="viewAllAssetsButton" class="bodyButtons btn-block btn-lg btn-success">
+                <span class="icon glyphicon glyphicon-th-list"></span><br>
+                View all Assets
+            </a>
+            <br></br>
+        </div>
+        <div class="col-sm-6">
+            <a class="bodyButtons btn-block btn-lg btn-success" href="userSettings.html">
+                <span class="icon glyphicon glyphicon-cog"></span><br>          
+                Settings
+            </a>
+            <br></br>            
+        </div> 
+        <div class="col-sm-6">
+            <a class="bodyButtons btn-block btn-lg btn-success" href="..\index.html">
+                <span class="icon glyphicon glyphicon-log-in"></span><br>
+                Log Out
+            </a>  
+            <br></br>                      
+        </div>
+    </div>
+
 </div>
 
+<script src="../js/homepage.js"></script>
 
 </body>
 </html>
